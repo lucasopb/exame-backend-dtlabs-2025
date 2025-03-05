@@ -24,3 +24,4 @@ def login(user_data: UserCreate, db: Session = Depends(get_db)):
     if not user:
         raise HTTPException(status_code=401, detail="Invalid credentials")
     return generate_token(user)
+ 

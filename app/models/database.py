@@ -18,6 +18,7 @@ Base = declarative_base()
 def create_tables():
     from app.models.user import User
     from app.models.sensor import SensorData
+    from app.models.server import Server
     Base.metadata.create_all(bind=engine)
 
 def get_db(db: Session = Depends(get_session_local)):
